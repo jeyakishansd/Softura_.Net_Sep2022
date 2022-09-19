@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .gridcontainer{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display:grid;
+            grid-template-columns:auto auto auto auto;
+            gap:10px;
+            background-color:paleturquoise;
+            padding:10px;
+        }
+        .gridcontainer div{
+            background-color:cornflowerblue;
+            text-align:center;
+            padding:20px;
+            border-bottom :30px solid orange;
+            height:200px;
+            width:250px;
+
+        }
+        .gitem{
+            background-color:darkgrey;
+            text-align:center;
+            font-size:20px;
+            padding:20px;
+        }
+        header{
+            font-size:20px;
+            background-color:darkseagreen;
+            color:darkblue;
+            text-align:center;
+            
+            
+        }
+        .g2{
+            text-align:center;
+        }
+        .g5{
+            float:right;
+            text-align-last;
+        }
+        .g6{
+            height:250px;
+        }
+        footer{
+            background-color:darkgray;
+            font-family:Century;
+            padding:15px;
+            text-align:center;
+            font-size:15px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Table Column</h1>
+    </header>
+    <div class="gridcontainer">
+        <div class="gitem g2">
+            <pre>
+  Menu
+    1
+    2
+    3
+    4
+    5
+    6
+  Login
+</pre>
+        </div>
+        <div class="gitem g3">1</div>
+        <div class="gitem g4">2</div>
+        <div class="gitem g5">
+            <h3>User Login</h3>
+            <input type="text" id="fname" name="fname" /></br>
+            <input type="text" id="lname" name="lname" /></br>
+            <input type="submit" value="login" />
+        </div>
+        <div class="gitem g6">3</div>
+        <div class="gitem g6">4</div>
+        <div class="gitem g6">5</div>
+        <div class="gitem g6">6</div>
+    </div>
+    <footer>Thank you</footer>
+</body>
+</html>
