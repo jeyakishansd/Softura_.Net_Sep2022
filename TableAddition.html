@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        table{
+            background-color:antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>Items</td>
+            <td>Amount</td>
+        </tr>
+        <tr>
+            <td>rice</td>
+            <td><input type="text" id="num1" onkeyup="addTwoNumbers()" /></td>
+        </tr>
+        <tr>
+            <td>curry</td>
+            <td><input type="text" id="num2" onkeyup="addTwoNumbers()"/></td>
+        </tr>
+        <tr>
+            <td>Fries</td>
+            <td><input type="text" id="num3" onkeyup="addTwoNumbers()"/></td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td><label  id="tot" /></td>
+        </tr>
+    </table>
+    <script>
+        $(document).ready(function () {
+            addTwoNumbers();
+        });
+        function addTwoNumbers() {
+            var n1 = $('#num1').val();
+            if (!n1) {
+                n1 = 0;
+            }
+            var n2 = $('#num2').val();
+            if (!n2) {
+                n2 = 0;
+            }
+            var n3 = $('#num3').val();
+            if (!n3) {
+                n3 = 0;
+            }
+            sum = Number(n1) + Number(n2)+Number(n3);
+            $('#tot').html(sum);
+        }
+    </script>
+
+</body>
+</html>
