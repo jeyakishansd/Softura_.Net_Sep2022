@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+</head>
+   
+    <body>
+        <form id="frm">
+            <label for="usrname">UserName</label>
+            <input type="text" id="usr" name="userName" />
+            <label for="pswd">Password</label>
+            <input type="password" id="pwd" name="password" />
+            <button type="button" onclick="validate()">submit</button>
+        </form>
+        <script>
+            let count = 0;
+            function validate() {
+
+                let userN = document.getElementById('usr').value;
+                let passwrd = document.getElementById('pwd').value
+
+                if (userN === passwrd) {
+                    document.write("Login Success");
+                } else {
+                    if (++count === 3) {
+                        window.close();
+                    } else {
+                        document.getElementById('usr').value = null;
+                        document.getElementById('pwd').value = null;
+                        alert("Incorrect Password");
+                    }
+
+                }
+            }
+
+        </script>
+    </body>
+
+</html>
