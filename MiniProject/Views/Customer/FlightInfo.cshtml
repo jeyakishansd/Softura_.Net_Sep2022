@@ -1,0 +1,53 @@
+﻿@model List<GixxWings.Models.FlightInfo>
+@{
+
+}
+<style>
+    .k{
+        background-image: url(../images/flightinfo.jpg);
+        background-size:cover;
+        background-position:center;
+        height:75vh;
+        font-weight:bold;
+        
+    }
+    .btn{
+        background-color:darkgreen;
+        color:darkorange;
+        font-weight:bold;
+    }
+    .jk{
+        left:50%;
+    }
+    
+</style>
+
+<div class="k">
+<div class="jk">
+<h2>List of flights</h2>
+    </div>
+    <table class="table">
+   
+    <thead>
+        <tr>
+            <th>Airlines</th>
+            <th>TravelDate</th>
+            <th>Price in Rs.</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model){
+            <tr>
+                <td>@item.Airlines</td>
+                <td >@item.DepatureDate</td>
+                <td>@item.PriceInr</td>
+                <td><a asp-controller ="Customer" asp-action="PaymentPage"><input class="btn" type="button" value="Book"></a> </td>
+            </tr>
+            
+
+        }
+    </tbody>
+
+    </table>
+</div>

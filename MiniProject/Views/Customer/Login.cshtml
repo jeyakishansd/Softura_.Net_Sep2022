@@ -1,0 +1,72 @@
+﻿@model GixxWings.Models.Login
+
+@{
+    ViewData["Title"] = "Login";
+}
+<style>
+    .im{
+        background-image: url(../images/login.jpeg);
+        background-size:cover;
+        background-position:center;
+        height:80vh ;
+        
+    }
+    
+    .log{
+        color:blue;
+        font-family:'Times New Roman', Times, serif;
+    }
+    .log-in{
+        position:absolute;
+        top:30%;
+        left:20%;
+    }
+    .tit{
+        padding:150px;
+        font-family:serif;
+        text-align:right;
+        color:lightsalmon;
+        font-style:italic;
+    }
+
+</style>
+<div class="im">
+   <div class="j">
+   
+    <div class="l">
+            <div class="tit">
+                <h3>Experience GIXX-WINGS!</h3>
+            </div>
+    <div class="log-in">
+                <h1 class="log">LOGIN</h1>
+                
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group" style="font-weight:bold">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+                    <div class="form-group" style="font-weight:bold">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password"  type="password" class="form-control" />
+                <span asp-validation-for="Password"  class="text-danger"></span>
+            </div>
+            <br/>
+          
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        </form>
+                <div>
+                    <a asp-action="Register" style="text-decoration:none; color:aqua;">New User? Click here to Register</a>
+                </div>
+    </div>
+        </div>
+
+
+</div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

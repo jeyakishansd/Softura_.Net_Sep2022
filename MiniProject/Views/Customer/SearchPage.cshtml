@@ -1,0 +1,80 @@
+﻿@model IEnumerable<GixxWings.Models.BookingInfo>
+
+@{
+    ViewData["Title"] = "FlightInformation";
+}
+<br />
+<br />
+<style>
+    .content{   
+        background-image: url(../images/OIP.jpg);
+        background-size:cover;
+        background-position:center;
+        height:80vh;
+    }
+    .form-group{
+        color:lightblue;
+        position:center;
+        width:200px;
+    }
+    .k{
+        position: absolute;
+        top: 30%;
+        left: 20%;
+    }
+     
+</style>
+
+<div class="content">
+    <div class="k">
+    
+    <form method="get" >
+        <div style="font-weight:bold">
+            <div class="form-group" >
+                <label class="control-label">Departure</label>
+                <select name="Departure" class="form-control">
+
+                    @foreach (var item in ViewBag.City)
+                    {
+                        <option value="@item.CityId">@item.CityName </option>
+                    }
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label class="control-label">Arrival</label>
+                <select name="Arrival" class="form-control">
+
+                    @foreach (var item in ViewBag.City)
+                    {
+                        <option value="@item.CityId">@item.CityName </option>
+                    }
+                </select>
+            </div>
+    
+
+            <div class="form-group" >
+                <label class="control-label">Travel Date</label>
+                <input name="TravelDate" type="date" class="form-control" />
+                <span class="text-danger"></span>
+            </div>
+            <br />
+
+
+           
+            <br />
+            <div class="form-group">
+                <input type="submit" value="search" class="btn btn-primary" />
+            </div>
+            <br/>
+            </div>
+           
+
+        
+
+    </form>
+    </div>
+
+
+</div>
